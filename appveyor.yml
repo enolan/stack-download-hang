@@ -1,4 +1,5 @@
 init:
 - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 build_script:
-    - stack.exe build --prefetch --dry-run +RTS -l -Ds 2> nul
+    - stack.exe build --prefetch --dry-run +RTS -l -Ds 2> stacklog
+    - ps: sleep 3600
