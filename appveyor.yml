@@ -3,5 +3,5 @@ init:
 build_script:
     - stack.exe setup > nul
     - mkdir tixstrobes
-    - stack.exe build --prefetch --dry-run & exit 0
+    - stack.exe build --prefetch --dry-run --verbose & exit 0
     - ps: sleep 3600
